@@ -1,0 +1,26 @@
+Title:
+Car Rental System
+THE COURSEWORK OVERVIEW & DESCRIPTION
+
+The assignment is to design and implement a Car Rental System and the target users are admin and customer. Admin can use the system to add new cars into the system and admin is also allowed to edit a car information. Besides, admin can use the system to handle customers’ booking by sending them booking confirmation after they made the booking. On the other hand, customers need to register as a user before making booking and the customers can check their bookings history from the system. In addition, the system is necessarily to be designed and developed using object-oriented approach covering object orientation concepts and principles. Furthermore, a supporting document is required to reflect the design and the implementation details demonstrating the object-oriented programing concepts and their code samples.
+
+
+
+
+COURSEWORK DESCRIPTION
+This coursework requires students to identify a business domain for a car rental service. Construct a software solution using object-oriented programming paradigm to support user registration, create and check bookings, handle car information, and send confirmation after each booking has been made. The target users of the system are admin and customers. The developed system should achieve the following requirements but not limited to:
+•	System login record for authentication and authorization process.
+•	Manage and update car information
+•	Manage customer’s booking
+•	Manage customer registration and booking
+•	Manage payment collection
+•	Check customer’s booking history
+•	Generate analyzed reports for the company
+With the aforementioned requirements, you are expected to analyze a business domain pertaining to a car rental service. All the information must be saved in text files. Apart from these, the general settings and data configuration as well as fundamental functions are included to facilitate the end users.
+
+GENERAL REQUIREMENTS
+•	The program submitted should compile and be executed without errors.
+•	Validation for input should be done for each entry from the users to avoid logical errors. 
+•	The implementation code must highlight the use of object-oriented programming concepts as required by the solution.
+•	Students should use text files for storing and retrieving data required for the system.
+•	Not allowed to use any database tools like access / oracle etc.
