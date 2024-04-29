@@ -6,7 +6,15 @@ public class Car {
     private double dailyRate;
   
     // Getters and Setters for all attributes
-    // ...
+    public String getMake() {
+      return make;
+    }
+  
+    public void setMake(String make) {
+      this.make = make;
+    }
+  
+    // ... (similar getters and setters for all attributes)
   
     // Method to display car information
     public void displayCarInfo() {
