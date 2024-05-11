@@ -1,0 +1,27 @@
+package com.mycompany.test;
+import java.awt.Button;
+import java.awt.FlowLayout;
+import java.awt.Label;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
+public class AdminPage implements ActionListener {
+        public void actionPerformed(ActionEvent e){
+           window.setVisible(false);
+           Test.x.window.setVisible(true);
+        }
+    Label admin;
+    Button logout;
+    JFrame window;
+    public AdminPage(){
+        window = new JFrame();
+            window.setSize(100,130);
+            window.setLocation(500,500);
+            window.setLayout(new FlowLayout());
+            admin = new Label("Admin Page");
+            logout = new Button("Logout");
+            logout.addActionListener(this);
+            window.add(logout);
+            //window.setVisible(true);
+    }
+}
