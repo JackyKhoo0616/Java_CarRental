@@ -15,7 +15,11 @@ public class LoginPage implements ActionListener {
                 if(x.equals("admin")&&y.equals("123")){
                     window.setVisible(false);
                     Test.y.window.setVisible(true);
-                }
+                }else if(x.equals("customer")&&y.equals("999")){
+                    window.setVisible(false);
+                     Test.z.window.setVisible(true);
+                } else{ 
+                }      JOptionPane.showMessageDialog(window,"Wrong username or password!");
             }
         }
         Button login;
@@ -39,3 +43,4 @@ public class LoginPage implements ActionListener {
         
         
 }
+
