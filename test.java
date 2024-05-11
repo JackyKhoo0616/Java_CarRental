@@ -5,5 +5,6 @@ public class Test {
     public static void main(String[] args) {
         x = new LoginPage();
         y= new AdminPage();
+        z = new CustomerPage();
     }
 }
