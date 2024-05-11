@@ -1,0 +1,28 @@
+package com.mycompany.test;
+import java.awt.Button;
+import java.awt.FlowLayout;
+import java.awt.Label;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
+public class CustomerPage implements ActionListener {
+        public void actionPerformed(ActionEvent e){
+           window.setVisible(false);
+           Test.x.window.setVisible(true);
+        }
+    Label customer;
+    Button logout;
+    JFrame window;
+    public CustomerPage(){
+        window = new JFrame();
+            window.setSize(100,130);
+            window.setLocation(500,300);
+            window.setLayout(new FlowLayout());
+            customer = new Label("Customer Page");
+            logout = new Button("Logout");
+            logout.addActionListener(this);
+            window.add(customer);
+            window.add(logout);
+            //window.setVisible(true);
+    }
+}
