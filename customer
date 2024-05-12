@@ -1,0 +1,9 @@
+package com.mycompany.test;
+public class Customer {
+    String username;
+    int password;
+    public Customer(String x, int y){
+        username= x;
+        password= y;
+    }
+}
