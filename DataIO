@@ -1,0 +1,45 @@
+package com.mycompany.test;
+import java.io.File;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+public class DataIO {
+    static ArrayList <Customer> all = new ArrayList<Customer> ();
+    public static void writeData(){
+        try{
+            PrintWriter p= new PrintWriter("data.txt");
+            for(int i=0; i<all.size();i ++){
+                Customer c = all.get(i);
+                p.println(c.username);
+                p.println(c.password);
+                p.println();
+            }
+            p.close();
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,"Error in write....");
+    }
+    }   
+    public static void readData(){
+        try{
+            Scanner s = new Scanner(new File("data.txt"));
+            while(s.hasNext()){
+                String a = s.nextLine();
+                int b = Integer.parseInt(s.nextLine());
+                s.nextLine();
+                Customer c = new Customer(a,b);
+                all.add(c);
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,"Error in read....");
+        }
+    }
+    public static Customer checkUsername(String s){
+        for(int i=0; i<all.size(); i ++){
+            if(all.get(i).username.equals(s)){
+                return all.get(i);
+            }
+        }
+        return null;
+    }
+}
