@@ -1,0 +1,63 @@
+import com.toedter.calendar.JDateChooser;
+import javax.swing.*;
+
+public class CarRentalUI extends JFrame {
+    private JLabel lblCustomerName;
+    private JTextField txtCustomerName;
+    private JLabel lblCarModel;
+    private JTextField txtCarModel;
+    private JLabel lblRentalDate;
+    private JDateChooser dateChooser;
+    private JButton btnSubmit;
+
+    public CarRentalUI() {
+        initUI();
+    }
+
+    private void initUI() {
+        lblCustomerName = new JLabel("Customer Name:");
+        txtCustomerName = new JTextField(20);
+        lblCarModel = new JLabel("Car Model:");
+        txtCarModel = new JTextField(20);
+        lblRentalDate = new JLabel("Rental Date:");
+        dateChooser = new JDateChooser();
+        btnSubmit = new JButton("Submit");
+
+        setLayout(new java.awt.GridLayout(4, 2));
+
+        add(lblCustomerName);
+        add(txtCustomerName);
+        add(lblCarModel);
+        add(txtCarModel);
+        add(lblRentalDate);
+        add(dateChooser);
+        add(btnSubmit);
+
+        btnSubmit.addActionListener(e -> handleSubmit());
+
+        setTitle("Car Rental System");
+        setSize(400, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+    }
+
+    private void handleSubmit() {
+        String customerName = txtCustomerName.getText();
+        String carModel = txtCarModel.getText();
+        java.util.Date rentalDate = dateChooser.getDate();
+
+        // Simple validation and display
+        if (customerName.isEmpty() || carModel.isEmpty() || rentalDate == null) {
+            JOptionPane.showMessageDialog(this, "Please fill all fields", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this, "Rental booked for " + customerName + " on " + rentalDate);
+        }
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            CarRentalUI carRentalUI = new CarRentalUI();
+            carRentalUI.setVisible(true);
+        });
+    }
+}
